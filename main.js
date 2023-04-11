@@ -11,85 +11,105 @@
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
 
-const vitorias = 0;
-const derrotas = 0;
+let vitorias = 0;
+let derrotas = 0;
+
+let valorJogador = "";
+let valorAdversario = "";
 
 function jogador() {
- 
   let opcaoJogador = document.getElementById("seletorId").value;
 
   if (opcaoJogador === "papel") {
     const e = document.createElement("p");
-    document
-      .getElementById("jogadorId")
-      .appendChild(
-        e
-      ).innerHTML = `
+    document.getElementById("jogadorId").appendChild(e).innerHTML = `
       <h3>Jogador</h3>
       <img id="bg-jogador" src="img/paper1.png" alt="">
       `;
+    valorJogador = "papel";
   } else if (opcaoJogador === "pedra") {
     const e = document.createElement("p");
-    document
-      .getElementById("jogadorId")
-      .appendChild(
-        e
-      ).innerHTML = `
+    document.getElementById("jogadorId").appendChild(e).innerHTML = `
       <h3>Jogador</h3>
       <img id="bg-jogador" src="img/rock1.png" alt="">
       `;
+    valorJogador = "pedra";
   } else {
     const e = document.createElement("p");
-    document
-      .getElementById("jogadorId")
-      .appendChild(
-        e
-      ).innerHTML = `
+    document.getElementById("jogadorId").appendChild(e).innerHTML = `
       <h3>Jogador</h3>
       <img id="bg-jogador" src="img/scissor1.png" alt="">
       `;
+    valorJogador = 'tesoura';
   }
-  return opcaoJogador
 }
 
 function sorteioAdversario() {
   let adversario = Math.round(Math.random() * 2);
 
-  if ((adversario == 0)) {
+  if (adversario == 0) {
     const ad = document.createElement("p");
-    document
-      .getElementById("adversarioId")
-      .appendChild(
-        ad
-      ).innerHTML = `
+    document.getElementById("adversarioId").appendChild(ad).innerHTML = `
       <h3>Adversário</h3>
       <img id="bg-adversario" src="img/paper2.png" alt="">
       `;
-  } else if ((adversario == 1)) {
+    valorAdversario = "papel";
+  } else if (adversario == 1) {
     const ad = document.createElement("p");
-    document
-      .getElementById("adversarioId")
-      .appendChild(
-        ad
-      ).innerHTML = `
+    document.getElementById("adversarioId").appendChild(ad).innerHTML = `
       <h3>Adversário</h3>
       <img id="bg-adversario" src="img/rock2.png" alt="">
       `;
+    valorAdversario = "pedra";
   } else {
     const ad = document.createElement("p");
-    document
-      .getElementById("adversarioId")
-      .appendChild(
-        ad
-      ).innerHTML = `
+    document.getElementById("adversarioId").appendChild(ad).innerHTML = `
       <h3>Adversário</h3>
       <img id="bg-adversario" src="img/scissor2.png" alt="">
       `;
+    valorAdversario = "tesoura";
   }
-  return adversario;
 }
 
-function jogar(){  
+function jogar() {
   jogador();
   sorteioAdversario();
+  resultados()
+}
+
+function resultados(){
+
+  
+  if (valorJogador == 'pedra' && valorAdversario == 'tesoura'){    
+    const resultado = document.createElement('h1');
+    document.getElementById('resultadoId').appendChild(resultado).innerHTML=`
+  <h1 class="resultado">Venceu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
+  } else if (valorJogador == 'pedra' && valorAdversario == 'papel'){
+    alert('perdeu');
+  } else if (valorJogador == 'pedra' && valorAdversario == 'pedra'){
+    alert('empatou');
+  }
+
+  if (valorJogador == 'papel' && valorAdversario == 'tesoura'){
+    alert('perdeu');
+  } else if (valorJogador == 'papel' && valorAdversario == 'papel'){
+    alert('empatou');
+  } else if (valorJogador == 'papel' && valorAdversario == 'pedra'){
+    alert('venceu');
+  }
+
+  if (valorJogador == 'tesoura' && valorAdversario == 'tesoura'){
+    alert('empatou');
+  } else if (valorJogador == 'tesoura' && valorAdversario == 'papel'){
+    alert('venceu');
+  } else if (valorJogador == 'tesoura' && valorAdversario == 'pedra'){
+    alert('perdeu');
+  }
+
+}
+
+function recomecar(){
+  location.reload()
 }
