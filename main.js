@@ -11,29 +11,86 @@
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
 
+const vitorias = 0;
+const derrotas = 0;
+
 function jogador() {
-  const opcaoJogador = document.getElementById("seletorId").value;
-  console.log(opcaoJogador);
+ 
+  let opcaoJogador = document.getElementById("seletorId").value;
+
   if (opcaoJogador === "papel") {
     const e = document.createElement("p");
     document
       .getElementById("jogadorId")
       .appendChild(
         e
-      ).innerHTML = `<span class="material-symbols-outlined">note</span>`;
+      ).innerHTML = `
+      <h3>Jogador</h3>
+      <span class="material-symbols-outlined">note</span>
+      `;
   } else if (opcaoJogador === "pedra") {
     const e = document.createElement("p");
     document
       .getElementById("jogadorId")
       .appendChild(
         e
-      ).innerHTML = `<span class="material-symbols-outlined">radio_button_unchecked</span>`;
+      ).innerHTML = `
+      <h3>Jogador</h3>
+      <span class="material-symbols-outlined">radio_button_unchecked</span>
+      `;
   } else {
     const e = document.createElement("p");
     document
       .getElementById("jogadorId")
       .appendChild(
         e
-      ).innerHTML = `<span class="material-symbols-outlined">content_cut</span>`;
+      ).innerHTML = `
+      <h3>Jogador</h3>
+      <span class="material-symbols-outlined">content_cut</span>
+      `;
   }
+  return opcaoJogador
+}
+
+function sorteioAdversario() {
+  let adversario = Math.round(Math.random() * 2);
+
+  if ((adversario == 0)) {
+    const ad = document.createElement("p");
+    document
+      .getElementById("adversarioId")
+      .appendChild(
+        ad
+      ).innerHTML = `
+      <h3>Adversário</h3>
+      <span class="material-symbols-outlined">note</span>
+      `;
+  } else if ((adversario == 1)) {
+    const ad = document.createElement("p");
+    document
+      .getElementById("adversarioId")
+      .appendChild(
+        ad
+      ).innerHTML = `
+      <h3>Adversário</h3>
+      <span class="material-symbols-outlined">radio_button_unchecked</span>
+      `;
+  } else {
+    const ad = document.createElement("p");
+    document
+      .getElementById("adversarioId")
+      .appendChild(
+        ad
+      ).innerHTML = `
+      <h3>Adversário</h3>
+      <span class="material-symbols-outlined">content_cut</span>
+      `;
+  }
+  return adversario;
+}
+
+function jogar(){
+  jogador();
+  sorteioAdversario();
+
 }

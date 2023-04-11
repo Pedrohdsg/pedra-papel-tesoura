@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,17 +12,24 @@
     />
   </head>
   <body>
-    <h1></h1>
-    <select name="seletor" id="seletorId" class="seletor" onchange="jogador()">
-      <option value="" disabled selected>Selecione</option>
-      <option value="pedra">Pedra</option>
-      <option value="papel">Papel</option>
-      <option value="tesoura">Tesoura</option>
-    </select>
-
+    <h1>Bem-vindo ao Pedra, papel e Tesoura</h1>
+    <div>
+      <strong>Selecione uma opção:</strong>
+      <select
+        name="seletor"
+        id="seletorId"
+        class="seletor"
+        onchange="jogar()"
+      >
+        <option value="" disabled selected>Selecione</option>
+        <option value="pedra">Pedra</option>
+        <option value="papel">Papel</option>
+        <option value="tesoura">Tesoura</option>
+      </select>
+    </div>
     <div class="jogador" id="jogadorId"></div>
-    
-    
+    <div class="adversario" id="adversarioId"></div>
+
     <script src="main.js"></script>
   </body>
 </html>
