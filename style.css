@@ -1,15 +1,17 @@
 body {
-  background-image: url("mao-de-empresarios-de-arvores-mostrando-o-conceito-de-jogo-de-tesoura-de-pedra-de-papel-por-ilustracao-de-renderizacao-3d.jpg");
+  /* background-image: url("https://w7.pngwing.com/pngs/334/751/png-transparent-rock-paper-scissors-hand-game-scissors-game-text-technic.png"); */
+  background-color: rgba(209, 202, 159, 0.274);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 #jogadorId {
-  margin: 8px;
-  padding: 15px;
+  margin: 12px;
+  padding: 12px;
   border: 4px;
   border-radius: 20px;
   display: inline-flex;
+  margin-right: 32px;
 }
 
 .material-symbols-outlined {
@@ -24,7 +26,7 @@ body {
 }
 
 .seletor {
-  margin: 20px;
+  margin: 16px;
   border-radius: 20px;
   background-color: rgba(218, 214, 188, 0.514);
   padding: 4px;
@@ -34,10 +36,41 @@ body {
 }
 
 #adversarioId {
-  margin: 8px;
-  padding: 15px;
+  margin: 12px;
+  padding: 12px;
   border: 4px;
   border-radius: 20px;
   display: inline-flex;
   color: crimson;
+  margin-left: 23px;
+}
+
+.jogo{
+  text-align: center;
+}
+
+#bg-jogador{
+  background-color: rgba(0, 0, 255, 0.4);
+  border-radius: 16px;
+  padding: 4px;
+  margin: 4px;
+}
+
+#bg-adversario{
+  background-color: rgba(220, 20, 60, 0.4);
+  border-radius: 16px;
+  padding: 4px;
+  margin: 4px;
+}
+
+h1{
+  font-size: xx-large;
+  font-family: cursive;
+}
+
+h3{
+  background-color: rgba(112, 112, 112, 0.5);
+  border-radius: 12px;
+  padding: 4px;
+  font-family: cursive;
 }

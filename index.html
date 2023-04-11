@@ -6,30 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pedra - Papel - Tesoura</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
-    />
+   
   </head>
   <body>
-    <h1>Bem-vindo ao Pedra, papel e Tesoura</h1>
+    <h1>Rock - Paper - Scissors</h1>
     <div>
       <strong>Selecione uma opção:</strong>
-      <select
-        name="seletor"
-        id="seletorId"
-        class="seletor"
-        onchange="jogar()"
-      >
+      <select name="seletor" id="seletorId" class="seletor" onchange="jogar()">
         <option value="" disabled selected>Selecione</option>
         <option value="pedra">Pedra</option>
         <option value="papel">Papel</option>
         <option value="tesoura">Tesoura</option>
       </select>
     </div>
-    <div class="jogador" id="jogadorId"></div>
-    <div class="adversario" id="adversarioId"></div>
-
+    <div class="jogo" id="jogoId">
+      <div class="jogador" id="jogadorId"></div>
+      <div class="adversario" id="adversarioId"></div>
+    </div>
     <script src="main.js"></script>
+    
   </body>
 </html>

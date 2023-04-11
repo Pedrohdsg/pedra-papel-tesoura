@@ -26,7 +26,7 @@ function jogador() {
         e
       ).innerHTML = `
       <h3>Jogador</h3>
-      <span class="material-symbols-outlined">note</span>
+      <img id="bg-jogador" src="img/paper1.png" alt="">
       `;
   } else if (opcaoJogador === "pedra") {
     const e = document.createElement("p");
@@ -36,7 +36,7 @@ function jogador() {
         e
       ).innerHTML = `
       <h3>Jogador</h3>
-      <span class="material-symbols-outlined">radio_button_unchecked</span>
+      <img id="bg-jogador" src="img/rock1.png" alt="">
       `;
   } else {
     const e = document.createElement("p");
@@ -46,7 +46,7 @@ function jogador() {
         e
       ).innerHTML = `
       <h3>Jogador</h3>
-      <span class="material-symbols-outlined">content_cut</span>
+      <img id="bg-jogador" src="img/scissor1.png" alt="">
       `;
   }
   return opcaoJogador
@@ -63,7 +63,7 @@ function sorteioAdversario() {
         ad
       ).innerHTML = `
       <h3>Adversário</h3>
-      <span class="material-symbols-outlined">note</span>
+      <img id="bg-adversario" src="img/paper2.png" alt="">
       `;
   } else if ((adversario == 1)) {
     const ad = document.createElement("p");
@@ -73,7 +73,7 @@ function sorteioAdversario() {
         ad
       ).innerHTML = `
       <h3>Adversário</h3>
-      <span class="material-symbols-outlined">radio_button_unchecked</span>
+      <img id="bg-adversario" src="img/rock2.png" alt="">
       `;
   } else {
     const ad = document.createElement("p");
@@ -83,14 +83,13 @@ function sorteioAdversario() {
         ad
       ).innerHTML = `
       <h3>Adversário</h3>
-      <span class="material-symbols-outlined">content_cut</span>
+      <img id="bg-adversario" src="img/scissor2.png" alt="">
       `;
   }
   return adversario;
 }
 
-function jogar(){
+function jogar(){  
   jogador();
   sorteioAdversario();
-
 }
