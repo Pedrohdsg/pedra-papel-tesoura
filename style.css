@@ -54,6 +54,7 @@ body {
   border-radius: 16px;
   padding: 4px;
   margin: 4px;
+  box-shadow: 4px 4px 5px rgb(0, 0, 255);
 }
 
 #bg-adversario{
@@ -61,11 +62,13 @@ body {
   border-radius: 16px;
   padding: 4px;
   margin: 4px;
+  box-shadow: 4px 4px 5px red;
 }
 
 h1{
   font-size: xx-large;
   font-family: cursive;
+  text-shadow: 2px 2px 5px red;
 }
 
 h3{
@@ -73,4 +76,5 @@ h3{
   border-radius: 12px;
   padding: 4px;
   font-family: cursive;
+  box-shadow: 4px 4px 5px rgb(3, 3, 3);
 }
