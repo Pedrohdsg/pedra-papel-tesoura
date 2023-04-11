@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,16 +13,16 @@
   </head>
   <body>
     <h1></h1>
-    <select name="Jogador" id="jogadorId">
+    <select name="seletor" id="seletorId" class="seletor" onchange="jogador()">
       <option value="" disabled selected>Selecione</option>
       <option value="pedra">Pedra</option>
       <option value="papel">Papel</option>
       <option value="tesoura">Tesoura</option>
     </select>
 
-    <span class="material-symbols-outlined">note</span>
-    <span class="material-symbols-outlined">content_cut</span>
-    <span class="material-symbols-outlined">radio_button_unchecked</span>
+    <div class="jogador" id="jogadorId"></div>
+    
+    
     <script src="main.js"></script>
   </body>
 </html>

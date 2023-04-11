@@ -10,3 +10,30 @@
 // 	.then(response => response.json())
 // 	.then(response => console.log(response))
 // 	.catch(err => console.error(err));
+
+function jogador() {
+  const opcaoJogador = document.getElementById("seletorId").value;
+  console.log(opcaoJogador);
+  if (opcaoJogador === "papel") {
+    const e = document.createElement("p");
+    document
+      .getElementById("jogadorId")
+      .appendChild(
+        e
+      ).innerHTML = `<span class="material-symbols-outlined">note</span>`;
+  } else if (opcaoJogador === "pedra") {
+    const e = document.createElement("p");
+    document
+      .getElementById("jogadorId")
+      .appendChild(
+        e
+      ).innerHTML = `<span class="material-symbols-outlined">radio_button_unchecked</span>`;
+  } else {
+    const e = document.createElement("p");
+    document
+      .getElementById("jogadorId")
+      .appendChild(
+        e
+      ).innerHTML = `<span class="material-symbols-outlined">content_cut</span>`;
+  }
+}
