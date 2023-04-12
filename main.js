@@ -1,19 +1,8 @@
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '15c04215dfmsh47b152db5b5c176p1edfc4jsn455d1e039959',
-// 		'X-RapidAPI-Host': 'rock-paper-scissors13.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://rock-paper-scissors13.p.rapidapi.com/?choice=paper', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
 let vitorias = 0;
 let derrotas = 0;
 let empates = 0;
+
+
 
 let valorJogador = "";
 let valorAdversario = "";
@@ -79,23 +68,26 @@ function jogar() {
 }
 
 function resultados() {
-  let resultado = document.createElement("h1");
+  let resultado = document.createElement("div");
 
   if (valorJogador == "pedra" && valorAdversario == "tesoura") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Venceu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   } else if (valorJogador == "pedra" && valorAdversario == "papel") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Perdeu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   } else if (valorJogador == "pedra" && valorAdversario == "pedra") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Empate!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   }
 
   if (valorJogador == "papel" && valorAdversario == "tesoura") {
@@ -103,16 +95,19 @@ function resultados() {
   <h1 class="resultado">Perdeu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   } else if (valorJogador == "papel" && valorAdversario == "papel") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
     <h1 class="resultado">Empate!</h1>
     <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
     `;
+
   } else if (valorJogador == "papel" && valorAdversario == "pedra") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Venceu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   }
 
   if (valorJogador == "tesoura" && valorAdversario == "tesoura") {
@@ -120,17 +115,21 @@ function resultados() {
   <h1 class="resultado">Empate!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   } else if (valorJogador == "tesoura" && valorAdversario == "papel") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Venceu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   } else if (valorJogador == "tesoura" && valorAdversario == "pedra") {
     document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Perdeu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
+
   }
+
   const esconderSeletor = document.getElementById('selecaoOpcao')
   esconderSeletor.style.display = 'none'
 }

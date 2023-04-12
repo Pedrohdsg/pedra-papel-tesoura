@@ -1,5 +1,5 @@
 body {
-  /* background-image: url("https://w7.pngwing.com/pngs/334/751/png-transparent-rock-paper-scissors-hand-game-scissors-game-text-technic.png"); */
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4f2510c8-934c-466c-af62-d8c0e3203e4c/d7x8ckr-23343743-8e61-4c69-bb66-e6f6c66eea29.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRmMjUxMGM4LTkzNGMtNDY2Yy1hZjYyLWQ4YzBlMzIwM2U0Y1wvZDd4OGNrci0yMzM0Mzc0My04ZTYxLTRjNjktYmI2Ni1lNmY2YzY2ZWVhMjkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.DhkaHjnI8OBOfzr6eRy3UnPkQ572cC9D3DhM36ctUMA");
   background-color: rgba(209, 202, 159, 0.274);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -78,6 +78,36 @@ h3{
   width: 120px;
 }
 
-.resultado{
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
   text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+#buttonId{  
+  width: 10%;
+  height: 40px;
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.541);
+  text-decoration-line: underline;
+  }
+
+#resultadoId{
+  text-align: center;
+}
+
+.resultado{
+  background-color: #ffffff7e;
+  border-radius: 12px;
+  max-width: max-content;
+  padding: 8px;
+  margin: auto auto 8px;
 }

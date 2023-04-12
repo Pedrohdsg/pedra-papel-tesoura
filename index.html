@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.9" />
     <title>Pedra - Papel - Tesoura</title>
     <link rel="stylesheet" href="style.css" />
-   
   </head>
   <body>
     <h1 class="titulo">Rock - Paper - Scissors</h1>
     <div class="selecaoOpcao" id="selecaoOpcao">
       <strong>Selecione uma opção:</strong>
       <select name="seletor" id="seletorId" class="seletor" onchange="jogar()">
-        <option value="" disabled selected>Selecione</option>
+        <option value="" selected disabled>Selecione</option>
         <option value="pedra">Pedra</option>
         <option value="papel">Papel</option>
         <option value="tesoura">Tesoura</option>
@@ -23,8 +22,8 @@
       <div class="jogador" id="jogadorId"></div>
       <div class="adversario" id="adversarioId"></div>
     </div>
-    <div class="resultado" id="resultadoId"></div>
+    <div id="resultadoId"></div>
     <script src="main.js"></script>
-    
   </body>
+  <footer>Pedro Henrique de Souza Gondim - 2023</footer>
 </html>
