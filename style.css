@@ -5,6 +5,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.titulo{
+  text-align: center;
+}
+
 #jogadorId {
   margin: 4px;
   padding: 12px;
@@ -44,7 +48,7 @@ body {
   padding: 4px;
   margin: 4px;
   box-shadow: 4px 4px 5px rgb(0, 0, 255);
-  max-width: 45%;
+  max-width: 35%;
 }
 
 #bg-adversario{
@@ -53,7 +57,7 @@ body {
   padding: 4px;
   margin: 4px;
   box-shadow: 4px 4px 5px red;
-  max-width: 45%;
+  max-width: 35%;
 }
 
 h1{
@@ -63,12 +67,15 @@ h1{
 }
 
 h3{
+  margin: auto;
+  margin-bottom: 8px;
   background-color: rgba(112, 112, 112, 0.5);
   border-radius: 12px;
   padding: 4px;
   font-family: cursive;
   box-shadow: 4px 4px 5px rgb(3, 3, 3);
   font-size: medium;
+  width: 120px;
 }
 
 .resultado{

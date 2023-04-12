@@ -13,6 +13,7 @@
 
 let vitorias = 0;
 let derrotas = 0;
+let empates = 0;
 
 let valorJogador = "";
 let valorAdversario = "";
@@ -40,7 +41,7 @@ function jogador() {
       <h3>Jogador</h3>
       <img id="bg-jogador" src="img/scissor1.png" alt="">
       `;
-    valorJogador = 'tesoura';
+    valorJogador = "tesoura";
   }
 }
 
@@ -74,42 +75,66 @@ function sorteioAdversario() {
 function jogar() {
   jogador();
   sorteioAdversario();
-  resultados()
+  resultados();
 }
 
-function resultados(){
+function resultados() {
+  let resultado = document.createElement("h1");
 
-  
-  if (valorJogador == 'pedra' && valorAdversario == 'tesoura'){    
-    const resultado = document.createElement('h1');
-    document.getElementById('resultadoId').appendChild(resultado).innerHTML=`
+  if (valorJogador == "pedra" && valorAdversario == "tesoura") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
   <h1 class="resultado">Venceu!</h1>
   <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
   `;
-  } else if (valorJogador == 'pedra' && valorAdversario == 'papel'){
-    alert('perdeu');
-  } else if (valorJogador == 'pedra' && valorAdversario == 'pedra'){
-    alert('empatou');
+  } else if (valorJogador == "pedra" && valorAdversario == "papel") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Perdeu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
+  } else if (valorJogador == "pedra" && valorAdversario == "pedra") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Empate!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
   }
 
-  if (valorJogador == 'papel' && valorAdversario == 'tesoura'){
-    alert('perdeu');
-  } else if (valorJogador == 'papel' && valorAdversario == 'papel'){
-    alert('empatou');
-  } else if (valorJogador == 'papel' && valorAdversario == 'pedra'){
-    alert('venceu');
+  if (valorJogador == "papel" && valorAdversario == "tesoura") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Perdeu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
+  } else if (valorJogador == "papel" && valorAdversario == "papel") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+    <h1 class="resultado">Empate!</h1>
+    <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+    `;
+  } else if (valorJogador == "papel" && valorAdversario == "pedra") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Venceu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
   }
 
-  if (valorJogador == 'tesoura' && valorAdversario == 'tesoura'){
-    alert('empatou');
-  } else if (valorJogador == 'tesoura' && valorAdversario == 'papel'){
-    alert('venceu');
-  } else if (valorJogador == 'tesoura' && valorAdversario == 'pedra'){
-    alert('perdeu');
+  if (valorJogador == "tesoura" && valorAdversario == "tesoura") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Empate!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
+  } else if (valorJogador == "tesoura" && valorAdversario == "papel") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Venceu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
+  } else if (valorJogador == "tesoura" && valorAdversario == "pedra") {
+    document.getElementById("resultadoId").appendChild(resultado).innerHTML = `
+  <h1 class="resultado">Perdeu!</h1>
+  <input type="button" value="OK!" id="buttonId" onclick="recomecar()">
+  `;
   }
-
+  const esconderSeletor = document.getElementById('selecaoOpcao')
+  esconderSeletor.style.display = 'none'
 }
 
-function recomecar(){
-  location.reload()
+function recomecar() {
+  location.reload();
 }
