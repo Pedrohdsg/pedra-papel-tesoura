@@ -96,8 +96,9 @@ footer{
   border-radius: 8px;
   display: inline-block;
   color: aliceblue;
-  background-color: rgba(0, 0, 0, 0.541);
-  text-decoration-line: underline;
+  background-color: rgba(0, 0, 0, 0.623);
+  text-decoration-line: underline;  
+  font-weight: bolder;
   }
 
 #resultadoId{
@@ -105,9 +106,17 @@ footer{
 }
 
 .resultado{
-  background-color: #ffffff7e;
+  background-color: #ffffffe5;
   border-radius: 12px;
   max-width: max-content;
   padding: 8px;
   margin: auto auto 8px;
+}
+
+#placarId{
+  width: 100%;
+  background-color: rgba(24, 44, 131, 0.5);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 4px;
 }
