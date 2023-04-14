@@ -2,23 +2,19 @@ let vitorias = 0;
 let derrotas = 0;
 let empates = 0;
 
-vitorias = JSON.parse(localStorage.getItem('vitorias'))
-derrotas = JSON.parse(localStorage.getItem('derrotas'))
-empates = JSON.parse(localStorage.getItem('empates'))
-
-
 let valorJogador = "";
 let valorAdversario = "";
 
+function jogar() {
+  
+  vitorias = JSON.parse(localStorage.getItem('vitorias'))
+  derrotas = JSON.parse(localStorage.getItem('derrotas'))
+  empates = JSON.parse(localStorage.getItem('empates'))
 
-function adicionarPlacar(){
-  let placar = document.createElement('div');
-  document.getElementById('placarId').appendChild(placar).innerHTML =`
-  <p>VITÓRIAS = ${vitorias}_________EMPATES = ${empates}_________DERROTAS = ${derrotas}</p>
-  `
+  jogador();
+  sorteioAdversario();
+  resultados();
 }
-
-
 
 function jogador() {
   let opcaoJogador = document.getElementById("seletorId").value;
@@ -70,14 +66,9 @@ function sorteioAdversario() {
   }
 }
 
-function jogar() {
-  jogador();
-  sorteioAdversario();
-  resultados();
-  adicionarPlacar()
-}
-
 function resultados() {
+
+
   let resultado = document.createElement("div");
 
   if (valorJogador == "pedra" && valorAdversario == "tesoura") {
@@ -144,6 +135,10 @@ function resultados() {
   localStorage.setItem("derrotas", derrotas);
   localStorage.setItem("empates", empates);
 
+  let placar = document.createElement('div');
+  document.getElementById('placarId').appendChild(placar).innerHTML =`
+  <p>VITÓRIAS = ${+vitorias}_________EMPATES = ${+empates}_________DERROTAS = ${+derrotas}</p>
+  `
 
   const esconderSeletor = document.getElementById("selecaoOpcao");
   esconderSeletor.style.display = "none";
